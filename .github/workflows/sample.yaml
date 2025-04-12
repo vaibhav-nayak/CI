@@ -6,4 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -  run: echo "Hello This is My github workflow"
-
+  Next-Hello-World:
+    runs-on: ubuntu-latest
+    steps:
+      - run : echo "This is next Hello World"
