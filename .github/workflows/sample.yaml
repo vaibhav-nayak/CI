@@ -10,3 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run : echo "This is next Hello World"
+  Show-Python-Program:
+    runs-on: ubuntu-latest
+    steps:
+      - run : cat main.py
+
