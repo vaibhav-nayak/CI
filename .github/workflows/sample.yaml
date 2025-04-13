@@ -3,22 +3,22 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Hello-World:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       -  run: echo "Hello This is My github workflow"
   Next-Hello-World:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - run : echo "This is next Hello World"
   Show-Python-Program:
     needs: [Hello-World, Next-Hello-World]
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run : cat main.py
   Run-Script:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: Show-Python-Program
     steps:
       - name: Checkout to repo
