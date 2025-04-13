@@ -11,6 +11,7 @@ jobs:
     steps:
       - run : echo "This is next Hello World"
   Show-Python-Program:
+    needs: [Hello-World, Next-Hello-World]
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -18,6 +19,7 @@ jobs:
       - run : cat main.py
   Run-Script:
     runs-on: ubuntu-latest
+    needs: Show-Python-Program
     steps:
       - name: Checkout to repo
         uses: actions/checkout@v4
